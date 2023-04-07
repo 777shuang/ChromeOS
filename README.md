@@ -1,0 +1,2 @@
+# ChromeOS インストールスクリプト
+Brunchを使ってChromeOSを起動したい人のためのスクリプト。
