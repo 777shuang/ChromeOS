@@ -1,11 +1,9 @@
 #!/bin/sh
-# SUBSCRIBE to How To Guys on youtube for more such videos https://www.youtube.com/c/HowToGuys
-sudo apt-get update
-sudo apt-get install figlet
-sudo apt-get install pv
-sudo apt-get install cgpt
-sudo figlet -c "SUBSCRIBE TO"
-sudo figlet -c How To
-sudo figlet -c Guys
-sudo echo https://www.youtube.com/c/HowToGuys
-sudo bash chromeos-install.sh -src rammus_recovery.bin -dst /dev/sda
+apt-get update
+apt-get install pv cgpt
+lsblk
+read -p "Where do you want to install? [/dev/sda] > " str
+if [ $str = "" ]; then
+  str=/dev/sda
+fi
+bash chromeos-install.sh -src rammus_recovery.bin -dst $str
